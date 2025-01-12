@@ -234,3 +234,37 @@ GROUP BY
 ORDER BY
     total_sales DESC;
 ```
+
+## 5. Cloud Architecture Diagram
+
+![Project Workflow Image Placeholder](supermarket_sales.png)
+
+### Data Extraction
+
+A Python script utilizes the Kaggle API to extract the supermarket sales dataset, unzips it, and stores the data as a CSV file in Google Cloud Storage.
+
+### Data Transformation
+
+- The Python script reads the source CSV file into a Pandas DataFrame.
+- Performs required transformations, such as:
+  - Renaming columns for consistency.
+  - Converting date formats.
+  - Normalizing data into dimensions (e.g., Branch, Customer, Product).
+- The transformed data is stored in cloud-based databases such as BigQuery or Cloud SQL.
+
+### Cloud Scheduler
+
+Automate the execution of the data extraction and transformation scripts using Cloud Scheduler for periodic updates. (If required)
+
+### Data Analytics
+
+- Use SQL queries to analyze the transformed data and create views or tables for reporting.
+- Example:
+  - Aggregated sales by branch and product line.
+  - Top-performing product lines by sales or customer ratings.
+  - Monthly sales trends.
+
+### Business Intelligence & Reporting
+
+- Use the transformed and analyzed data as the source for visualizations and insights.
+- Create interactive dashboards with required KPIs using a BI tool such as Looker Studio or Tableau.
