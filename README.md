@@ -94,7 +94,7 @@ conn.close()
 
 ## 3. Export SQL Query Data as CSV File
 
-The final step involves generating a report based on a SQL query. The query ranks products by sales within each branch and exports the top 3 products per branch to a CSV file.
+The final step involves generating a report based on a SQL query. The query ranks product lines by sales within each branch and exports the top 3 product lines per branch to a CSV file.
 
 ### Steps:
 
@@ -254,7 +254,8 @@ A Python script utilizes the Kaggle API to extract the supermarket sales dataset
 
 ### Cloud Scheduler
 
-Automate the execution of the data extraction and transformation scripts using Cloud Scheduler for periodic updates. (If required)
+Automate the execution of the data extraction and transformation scripts using Cloud Scheduler for periodic updates. (If required)</br>
+**Note:** For this solution we can utilize Cloud Storage trigger for cloud function as well
 
 ### Data Analytics
 
